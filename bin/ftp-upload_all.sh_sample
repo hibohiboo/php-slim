@@ -1,0 +1,16 @@
+#!/bin/bash
+
+# このシェルスクリプトのディレクトリの絶対パスを取得。
+bin_dir=$(cd $(dirname $0) && pwd)
+parent_dir=$(cd $bin_dir/.. && pwd)
+public_dir=$(cd $parent_dir/public && pwd)
+host=xxx.starfree.jp
+user=xxx.starfree.jp
+pass=xxxxx
+
+cd $public_dir 
+curl --upload-file composer.phar --user $user:$pass ftp://$host/
+curl --upload-file .htaccess --user $user:$pass ftp://$host/
+curl --upload-file index.php --user $user:$pass ftp://$host/
+find templates -type f -exec curl -u $user:$pass --ftp-create-dirs -T {}  ftp://$host/{} \;
+find vendor -type f -exec curl -u $user:$pass --ftp-create-dirs -T {}  ftp://$host/{} \;

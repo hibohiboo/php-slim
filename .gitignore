@@ -1,2 +1,4 @@
 node_modules
 vendor
+ftp-upload.sh
+ftp-upload_all.sh

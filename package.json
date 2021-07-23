@@ -1,0 +1,15 @@
+{
+  "name": "whitemap",
+  "version": "0.0.1",
+  "description": "to TRPG Scenario Maker",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@ssh.dev.azure.com:v3/hibohiboo/%E8%A1%9B%E6%98%9F%E5%BA%AD%E5%9C%92/php-slim"
+  },
+  "author": "",
+  "license": "MIT"
+}

@@ -4,7 +4,7 @@
   "description": "to TRPG Scenario Maker",
   "main": "index.js",
   "scripts": {
-    "pre-push": "echo push"
+    "pre-push": "./bin/hooks/commit-msg"
   },
   "repository": {
     "type": "git",
@@ -17,7 +17,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-push": "npm run pre-push"
+      "pre-commit": "npm run pre-commit"
     }
   }
 }

@@ -3,7 +3,7 @@
 # このシェルスクリプトのディレクトリの絶対パスを取得。
 bin_dir=$(cd $(dirname $0) && pwd)
 docker_dir=$(cd $bin_dir/../docker && pwd)
-container_name=${1:-zeit_vercel}
+container_name=${1:-workspace}
 
 # $container_nameの有無をgrepで調べる
 docker ps | grep $container_name
